@@ -9,7 +9,7 @@ sharing: true
 footer: true
 ---
 
-By default, all of your devices will be visible and have a default icon determined by their domain. You can customize the look and feel of your front page by altering some of these parameters. This can be done by overriding attributes of specific entities.
+By default, all of your devices will be visible and have a default icon determined by their domain. You can customize the look and feel of your front page by altering some of these parameters. This can be done by overriding attributes of specific entities. 
 
 ```yaml
 # Example configuration.yaml entry
@@ -54,5 +54,8 @@ Home Assistant offers a service to reload the core configuration while Home Assi
 <p class='note warning'>
 New customize information will be applied the next time the state of the entity gets updated.
 </p>
+
+### Splitting customize:#####
+Ehen splitting customize: in seperate file you need to make sure customize: ! include customize.yaml is directly under time_zone: and not with your other ! includes.
 
 ### [Next step: Setting up presence detection &raquo;](/getting-started/presence-detection/)
