@@ -27,6 +27,14 @@ $ wget -Nnv https://raw.githubusercontent.com/home-assistant/fabric-home-assista
 
 Installation will take approx. 1-2 hours depending on the Raspberry Pi model the installer is being run against. The installer will identitfy what Raspberry PI hardware revision you are using and adjust commands accordingly. A complete log of the install is located at: `/home/pi/fabric-home-assistant/installation_report.txt` The installer has been updated to simply log any errors encountered, but resume installing. Please consult the "installation report" if your install encountered issues. 
 
+<p class='note'>
+Note that if you run into errors during installation then run these commands and try again:
+rm -rf fabric-home-assistant
+sudo apt-get install libffi-dev libssl-dev
+sudo pip install cryptography --force-reinstall
+
+More info about this issue: https://community.home-assistant.io/t/one-timer-installer-fails-on-raspberry-pi-3/7470/8
+</p>
 [BRUH automation](http://www.bruhautomation.com) has created [a tutorial video](https://www.youtube.com/watch?v=VGl3KTrYo6s) explaining how to install Raspbian on your Raspberry Pi and install Home Assistant using the All-In-One Installer.
 
 Once rebooted, your Raspberry Pi will be up and running with Home Assistant. You can access it at [http://your_raspberry_pi_ip:8123](http://your_raspberry_pi_ip:8123).
